@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>HAPPY BORHTDYA LAII!💜</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     FLOATING BACKGROUND STICKERS (behind everything)
+     To change/add stickers: duplicate a <div class="bg-sticker ...">
+     and change the emoji inside + the class for animation style.
+     ============================================================ -->
+<div class="bg-stickers" id="bgStickers">
+  <div class="bg-sticker float-slow" style="left:6%; top:12%;">🧸</div>
+  <div class="bg-sticker float-med" style="left:85%; top:8%;">⭐</div>
+  <div class="bg-sticker float-fast" style="left:12%; top:70%;">💜</div>
+  <div class="bg-sticker float-slow" style="left:80%; top:60%;">🎄</div>
+  <div class="bg-sticker float-med" style="left:50%; top:85%;">✨</div>
+  <div class="bg-sticker float-fast" style="left:90%; top:35%;">🌸</div>
+  <div class="bg-sticker float-slow" style="left:3%; top:40%;">💫</div>
+  <div class="bg-sticker float-med" style="left:65%; top:5%;">🎀</div>
+</div>
+
+<!-- ============================================================
+     THE BOOK
+     ============================================================ -->
+<div class="book-wrapper">
+  <div class="book" id="book">
+
+    <!-- stacked pages behind the main page, purely decorative -->
+    <div class="book-stack layer2"></div>
+    <div class="book-stack layer1"></div>
+
+    <!-- ==================== PAGE 1: COVER ==================== -->
+    <section class="page page-cover" id="pageCover">
+      <div class="page-inner cover-inner">
+
+        <div class="cover-stickers">
+          <span class="sticker sticker-bear bounce-soft">🧸</span>
+          <span class="sticker sticker-tree sway">🎄</span>
+          <span class="sticker sticker-candy spin-slow">🍬</span>
+          <span class="sticker sticker-star1 twinkle">⭐</span>
+          <span class="sticker sticker-star2 twinkle-delay">✨</span>
+          <span class="sticker sticker-heart1 pulse">💜</span>
+          <span class="sticker sticker-heart2 pulse-delay">💕</span>
+          <span class="sticker sticker-flower sway-delay">🌷</span>
+          <span class="sticker sticker-gift wiggle">🎁</span>
+        </div>
+
+        <div class="cover-frame">
+          <!-- CHANGE TITLE TEXT HERE -->
+          <h1 class="cover-title">HAPPY<br>BIRTHDAY<br>LAII!</h1>
+        </div>
+
+        <button class="btn-click-me" id="btnStart">
+          <span>click me!</span>
+          <span class="btn-sparkle">✨</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 2: GIFTS ==================== -->
+    <section class="page page-gifts" id="pageGifts">
+      <div class="page-inner gifts-inner">
+
+        <button class="btn-back" id="btnBack">← back</button>
+
+        <h2 class="gifts-title">your gifts 🎀</h2>
+        <p class="gifts-sub">open them in order teehee</p>
+
+        <div class="gifts-row" id="giftsRow">
+          <button class="gift-card" id="gift1" data-gift="1">
+            <span class="gift-lock">🔒</span>
+            <span class="gift-emoji">🎁</span>
+            <span class="gift-label">gift</span>
+            <span class="gift-shine"></span>
+          </button>
+          <button class="gift-card locked" id="gift2" data-gift="2">
+            <span class="gift-lock">🔒</span>
+            <span class="gift-emoji">🎁</span>
+            <span class="gift-label">gift</span>
+            <span class="gift-shine"></span>
+          </button>
+          <button class="gift-card locked" id="gift3" data-gift="3">
+            <span class="gift-lock">🔒</span>
+            <span class="gift-emoji">🎁</span>
+            <span class="gift-label">gift</span>
+            <span class="gift-shine"></span>
+          </button>
+          <button class="gift-card locked" id="gift4" data-gift="4">
+            <span class="gift-lock">🔒</span>
+            <span class="gift-emoji">🎁</span>
+            <span class="gift-label">gift</span>
+            <span class="gift-shine"></span>
+          </button>
+        </div>
+
+        <div class="progress-dots" id="progressDots">
+          <span class="dot" data-dot="1"></span>
+          <span class="dot" data-dot="2"></span>
+          <span class="dot" data-dot="3"></span>
+          <span class="dot" data-dot="4"></span>
+        </div>
+
+        <button class="btn-next-page locked" id="btnNextPage">next page</button>
+
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 3: COURT ==================== -->
+    <section class="page page-court" id="pageCourt">
+      <div class="page-inner court-inner">
+
+        <button class="btn-back" id="btnBackCourt">← back</button>
+
+        <div class="court-stickers">
+          <span class="sticker court-sticker-1 twinkle">✨</span>
+          <span class="sticker court-sticker-2 pulse">💜</span>
+          <span class="sticker court-sticker-3 sway">🌷</span>
+          <span class="sticker court-sticker-4 twinkle-delay">⭐</span>
+        </div>
+
+        <div class="court-frame" id="courtFrame">
+          <!-- CHANGE COURT QUESTION TEXT HERE -->
+          <p class="court-question">crushback mo ko para masaya naman ako:P</p>
+
+          <div class="court-choices" id="courtChoices">
+            <button class="btn-court-yes" id="btnCourtYes">yes</button>
+            <button class="btn-court-no" id="btnCourtNo">no</button>
+          </div>
+
+          <span class="court-sad-sticker" id="courtSadSticker">🥺</span>
+
+          <div class="court-cheer" id="courtCheer">
+            <p class="court-cheer-text">yay!! 💜</p>
+            <div class="court-cheer-stickers">
+              <span class="bounce-soft">🎉</span>
+              <span class="pulse">💕</span>
+              <span class="twinkle">✨</span>
+              <span class="sway">🎀</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- credits — sits on top of whichever page is showing, bottom-left of the book -->
+    <!-- ribbon bookmark, sits on top of whichever page is showing -->
+    <div class="book-ribbon"></div>
+
+    <div class="book-credits">secret</div>
+
+  </div>
+</div>
+
+<!-- POPUP: GIFT 1 — LETTER -->
+<div class="modal-overlay" id="modal1">
+  <div class="modal letter-modal">
+    <button class="modal-close" data-close="modal1">✕</button>
+    <div class="modal-stickers"><span class="m-sticker">🧸</span><span class="m-sticker">💜</span><span class="m-sticker">⭐</span></div>
+    <p class="letter-heading">for my bff 💌</p>
+    <!-- CHANGE GIFT 1 LETTER TEXT HERE -->
+    <p class="letter-text">HAPPY BIRTHDAY LALAI, i wish you the best of the best, Im so proud of you for all the battles you went through. Im always and will always be proud of you, don't let life kill you before death can, live your life to the fullest. Don't be too hard on yourself, I hope life treats you gently, and i hope you treat yourself gently toooo, mahal kita higit pa sa tatlong libo't limang daan. you're never alone while im here, even on your worst day..... again HAPPE HAPPE BERHTDAYYYY TO YOU LAIIIIIII, 
+‎grah grah pow <br><br></p>
+    <button class="btn-close-cute" data-close="modal1">close 💜</button>
+  </div>
+</div>
+
+<!-- POPUP: GIFT 2 — FLOWERS -->
+<div class="modal-overlay" id="modal2">
+  <div class="modal letter-modal">
+    <button class="modal-close" data-close="modal2">✕</button>
+    <div class="modal-stickers"><span class="m-sticker">🌸</span><span class="m-sticker">🌷</span><span class="m-sticker">🌼</span></div>
+    <div class="bouquet-display" id="bouquetDisplay">💐</div>
+    <p class="letter-heading">a bouquet for u 🌷</p>
+    <!-- CHANGE GIFT 2 LETTER TEXT HERE -->
+    <p class="letter-text">hiiii, this bouquet is for u, 
+<br><br>
+btw tomboi ka parin ha 😁</p>
+    <button class="btn-close-cute" data-close="modal2">close 🌸</button>
+  </div>
+</div>
+
+<!-- POPUP: GIFT 3 — MUSIC PLAYER -->
+<div class="modal-overlay" id="modal3">
+  <div class="modal player-modal">
+    <button class="modal-close" data-close="modal3">✕</button>
+
+    <div class="player-card">
+      <div class="player-top-row">
+        <div class="player-disc" id="playerDisc">
+          <!-- ============================================
+               ADD ALBUM ART HERE (optional):
+               replace the emoji span below with:
+               <img src="album-art.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:18px;" alt="">
+               ============================================ -->
+          <span class="disc-art">🎵</span>
+        </div>
+        <span class="player-wave-icon">▂▄▆▄▂</span>
+      </div>
+
+      <div class="player-song-block">
+        <p class="player-song">Someday</p>
+        <p class="player-artist">The Ridleys</p>
+      </div>
+
+      <div class="player-progress-wrap">
+        <span class="player-time" id="timeCurrent">--:--</span>
+        <div class="player-progress-bar" id="progressBar">
+          <div class="player-progress-fill" id="progressFill"></div>
+          <div class="player-progress-knob" id="progressKnob"></div>
+        </div>
+        <span class="player-time" id="timeTotal">--:--</span>
+      </div>
+
+      <div class="player-controls">
+        <div class="player-btn-group">
+          <button class="player-btn" id="btnRewind">⏪</button>
+          <button class="player-btn player-btn-play" id="btnPlay">▶</button>
+          <button class="player-btn" id="btnForward">⏩</button>
+        </div>
+        <button class="player-btn-cast">📡</button>
+      </div>
+
+      <div class="player-stickers"><span>💜</span><span>🎧</span><span>🎶</span></div>
+    </div>
+
+    <!-- ============================================================
+         AUDIO SOURCE:
+         Using "someday.mp4" (a video file) purely for its audio
+         track — the <video> tag is hidden with display:none so only
+         sound plays, the disc/player UI above stays as the visible
+         "player". Same id="audioPlayer" as before, so none of the
+         script.js logic needed to change (play/pause/currentTime/
+         duration all work the same on <video> as on <audio>).
+         Do NOT use a copyrighted file without permission to host it.
+         ============================================================ -->
+    <video id="audioPlayer" src="C:\Users\PC\Downloads\someday.mp4" preload="metadata" style="display:none;"></video>
+  </div>
+</div>
+
+    <button class="btn-100-things" id="btn100Things">100 things i like about you! 💜</button>
+    <button class="btn-close-cute" data-close="modal4">close</button>
+  </div>
+</div>
+
+<!-- POPUP: 100 THINGS LIST -->
+<div class="modal-overlay" id="modal100">
+  <div class="modal list-modal">
+    <button class="modal-close" data-close="modal100">✕</button>
+    <p class="letter-heading">100 things i like about u 💜</p>
+    <div class="things-scroll" id="thingsScroll">
+      <!-- List items (and the closing note after #100) are generated in
+           the script below from LIST_ITEMS / LIST_FOOTER.
+           To edit the text, edit those in the <script> section. -->
+    </div>
+  </div>
+</div>
+
+<div class="floaties-layer" id="floatiesLayer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
